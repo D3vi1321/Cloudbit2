@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Navbar from './Navbar';
 import '../css/Hero.css';
 
 const Hero = () => {
@@ -21,25 +22,7 @@ const Hero = () => {
 
   return (
     <div className="hero-container">
-      {/* Navigation Header */}
-      <nav className="hero-nav">
-        <div className="nav-brand">
-          <h2>Cloudbit</h2>
-        </div>
-        <div className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#courses">Courses</a>
-          <a href="#careers">Careers</a>
-          <a href="#blog">Blog</a>
-          <a href="#about">About Us</a>
-        </div>
-        <div className="nav-buttons">
-          <button className="login-btn" onClick={handleLogin}>
-            Login
-          </button>
-        </div>
-      </nav>
-
+      <Navbar />
       {/* Hero Content */}
       <div className="hero-content">
         <div className="hero-left">

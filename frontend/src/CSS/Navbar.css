@@ -1,0 +1,148 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  height: 70px;  /* Increased from 50px */
+  width: 100%;
+  background: linear-gradient(135deg, #49c5b6 0%, #5dd5c7 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Nav Brand */
+.nav-brand h2 {
+  color: white;
+  font-size: 1.6rem;  /* Increased from 1.3rem */
+  font-weight: 700;    /* Bolder */
+  margin: 0;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;  /* Optional: makes text uppercase */
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;  /* Increased from 1.1rem */
+  padding: 1rem 1rem;  /* Increased padding */
+  position: relative;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  opacity: 0.9;
+}
+
+/* Nav Buttons */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn {
+  background: white;
+  color: #49c5b6;
+  border: none;
+  padding: 0.6rem 1.8rem;  /* Increased padding */
+  border-radius: 5px;  /* More rounded */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-size: 1.1rem;  /* Increased from 1rem */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: uppercase;  /* Optional: makes text uppercase */
+  letter-spacing: 0.5px;
+}
+
+.login-btn:hover {
+  background: white;
+  color: #49c5b6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1.2rem;
+    padding: 0 1rem;
+    margin-left: 40px;
+    margin-right: 10px;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 0.8rem 0.4rem;
+  }
+  
+  .login-btn {
+    padding: 0.35rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  
+  .nav-links {
+    display: none; /* Hide links on mobile */
+  }
+  
+  .nav-brand h2 {
+    font-size: 1.5rem;
+  }
+  
+  .login-btn {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Add padding to the top of the hero content to account for fixed navbar */
+/* Add padding to the top of the hero content to account for fixed navbar */
+.hero-container {
+  padding-top: 60px;
+}
